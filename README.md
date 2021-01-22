@@ -3,8 +3,8 @@ ECS Software App
 Steps to Install:
 
         => You can Unzip the above file or Clone the app using https://github.com/balaji-kamalesan-au3/codaGlobal.git
-        => Navigate into the app, run yarn install or npm install (to Install dependencies)
-        => Run yarn start or npm start (to Start the Application)
+        => Navigate into the app, run yarn install (Preferred as I used yarn) or npm install ==> (to Install dependencies)
+        => Run yarn start or npm start ==> (to Start the Application)
 
 Functionalities of the app:
 
