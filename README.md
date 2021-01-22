@@ -22,4 +22,6 @@ Functionalities of the app:
         Email : balajikamalesan96@gmail.com
         Mobile : 8838159833
 
+    You can also find the code in this repo : https://github.com/balaji-kamalesan-au3/EcsSoftwareApp
+
     Thank you :) Happy Coding
