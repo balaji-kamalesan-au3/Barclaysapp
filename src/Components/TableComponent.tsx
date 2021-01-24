@@ -1,10 +1,11 @@
 import React from 'react';
-import { DataGrid, SelectionChangeParams } from '@material-ui/data-grid'
+import { DataGrid, RowModel, RowSelectedParams, SelectionChangeParams } from '@material-ui/data-grid'
 import { Container } from '@material-ui/core';
 
 interface TableProps {
     data : Array<ModifiedBook>,
-    manageCart : (list: SelectionChangeParams   ) => void;
+    
+    changeSelectedBook : (book:RowModel) => void;
 }
 
 interface TableState {
@@ -20,8 +21,11 @@ export interface ModifiedBook {
     isbn : number,
     language_code : string,
     price : number,
-    ratings_count : number
+    ratings_count : number,
+    Image : string,
+    quantity ?: number
   }
+
 
 class TableComponent extends React.Component< TableProps,TableState>{
     constructor(props : TableProps){
@@ -61,7 +65,9 @@ class TableComponent extends React.Component< TableProps,TableState>{
         return(
             <Container>
             <div style={{ height: 900, width: '100%' }}>
-                  <DataGrid rows={this.state.data} columns={dataColumns} pageSize={50} checkboxSelection onSelectionChange ={ (newSelection ) => this.props.manageCart(newSelection)} />
+                  <DataGrid rows={this.state.data} columns={dataColumns} pageSize={50} checkboxSelection  onRowSelected={(param : RowSelectedParams) => {
+                        this.props.changeSelectedBook(param.data);
+                  }} />
             </div>
             </Container>
         )

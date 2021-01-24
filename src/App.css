@@ -88,3 +88,20 @@
   justify-content: space-around
 }
 
+.CartContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly
+}
+
+.alert{
+  width: 100%;
+  margin: 1% 5%
+}
+
+.cartlistcard{
+  max-width : 400px;
+  margin : 1%
+}
